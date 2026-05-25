@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+}
+
+/* TOPBAR */
+.topbar {
+  background: darkblue;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.topbar a {
+  color: #ffd700;
+  text-decoration: none;
+}
+
+/* CONTAINER */
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* FORM */
+.form {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+}
+
+.form h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: darkblue;
+}
+
+/* INPUT */
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box label {
+  display: block;
+  margin-bottom: 5px;
+  color: darkblue;
+}
+
+.input-box input,
+.input-box textarea,
+.input-box select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* TEXTAREA */
+textarea {
+  height: 100px;
+}
+
+/* BUTTONS */
+.gps-btn {
+  width: 100%;
+  padding: 10px;
+  background: #ffd700;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: darkblue;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* HOVER */
+.submit-btn:hover {
+  background: #001f5c;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .form {
+    padding: 20px;
+  }
+}

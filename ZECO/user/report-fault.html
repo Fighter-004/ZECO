@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Fault</title>
+
+  <link rel="stylesheet" href="../assets/css/report.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <h2>⚡ Report Electricity Fault</h2>
+    <a href="dashboard.html">⬅ Back</a>
+  </div>
+
+  <!-- FORM CONTAINER -->
+  <div class="container">
+
+    <form class="form" action="#" method="POST" enctype="multipart/form-data">
+
+      <h3>Fill the form below</h3>
+
+      <!-- FAULT TYPE -->
+      <div class="input-box">
+        <label>Fault Type</label>
+        <select name="fault_type" required>
+          <option value="">Select fault type</option>
+          <option value="Power Outage">Power Outage</option>
+          <option value="Fallen Pole">Fallen Pole</option>
+          <option value="Transformer Fault">Transformer Fault</option>
+          <option value="Loose Wires">Loose Wires</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- DESCRIPTION -->
+      <div class="input-box">
+        <label>Description</label>
+        <textarea name="description" placeholder="Explain the problem clearly..." required></textarea>
+      </div>
+
+      <!-- LOCATION -->
+      <div class="input-box">
+        <label>Location</label>
+        <input type="text" id="location" name="location" placeholder="Enter location or use GPS" required>
+      </div>
+
+      <!-- GPS BUTTON -->
+      <button type="button" class="gps-btn" onclick="getLocation()">
+        📍 Detect My Location
+      </button>
+
+      <!-- IMAGE -->
+      <div class="input-box">
+        <label>Upload Image (optional)</label>
+        <input type="file" name="image">
+      </div>
+
+      <!-- SUBMIT -->
+      <button type="submit" class="submit-btn">
+        Submit Report
+      </button>
+
+    </form>
+
+  </div>
+
+  <!-- GPS SCRIPT -->
+  <script>
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+          document.getElementById("location").value =
+            position.coords.latitude + ", " + position.coords.longitude;
+        }, function() {
+          alert("Unable to get location");
+        });
+      } else {
+        alert("Geolocation not supported");
+      }
+    }
+  </script>
+
+</body>
+</html>

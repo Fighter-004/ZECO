@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Tasks</title>
+
+  <link rel="stylesheet" href="../assets/css/tech.css">
+</head>
+
+<body>
+
+  <div class="topbar">
+    <h2>📋 My Tasks</h2>
+    <a href="dashboard.html">⬅ Back</a>
+  </div>
+
+  <div class="container">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Fault Type</th>
+          <th>Location</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <!-- DATA FROM DATABASE -->
+        <tr>
+          <td>Power Outage</td>
+          <td>Stone Town</td>
+          <td class="pending">Pending</td>
+          <td>
+            <a href="task-details.html" class="view-btn">View</a>
+          </td>
+        </tr>
+
+        <tr>
+          <td colspan="4" class="empty">No tasks assigned</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+  </div>
+
+</body>
+</html>

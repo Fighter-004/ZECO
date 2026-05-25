@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+
+  <link rel="stylesheet" href="../assets/css/dashboard.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- TOP HEADER -->
+  <div class="topbar">
+    <h2>⚡ ZECO Fault System</h2>
+    <a href="../login.html" class="logout">Logout</a>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="container">
+
+    <h1>Welcome 👋</h1>
+    <p>Report electricity problems and track progress easily.</p>
+
+    <!-- ACTION BUTTONS -->
+    <div class="actions">
+      <a href="report-fault.html" class="btn primary">⚠ Report Fault</a>
+      <a href="my-reports.html" class="btn secondary">📄 My Reports</a>
+    </div>
+
+    <!-- REPORT LIST -->
+    <div class="reports">
+
+      <h3>Your Reports</h3>
+
+      <table>
+        <tr>
+          <th>Type</th>
+          <th>Status</th>
+          <th>Date</th>
+        </tr>
+
+        <!-- REAL DATA ITATOKA DATABASE -->
+        <tr>
+          <td colspan="3" class="empty">
+            No reports yet
+          </td>
+        </tr>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
